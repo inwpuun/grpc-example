@@ -15,6 +15,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.get("/",(req,res)=>{
     client.getAllMenu(null,(err,data)=>{
         if(!err){
+            console.log(data); 
             res.render("menu",{
                 results: data.menu
             });
